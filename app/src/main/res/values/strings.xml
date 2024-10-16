@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Money Counter</string>
+    <string name="tap">Tap</string>
+    <string name="reached_10">You have reached 10</string>
 </resources>

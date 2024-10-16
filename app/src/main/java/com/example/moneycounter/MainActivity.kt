@@ -36,6 +36,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.moneycounter.ui.theme.MoneyCounterTheme
+import androidx.compose.ui.res.stringResource
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -73,7 +74,7 @@ fun MyApp() {
             Spacer(modifier = Modifier.height(130.dp))
             CreateCircle(amount) { newAmount -> amount = newAmount }
             Spacer(modifier = Modifier.height(50.dp))
-            if(amount >= 10) Text(text= "You have reached 10", color = Color.White)
+            if(amount >= 10) Text(text= stringResource(id = R.string.reached_10), color = Color.White)
         }
     }
 }
@@ -96,7 +97,7 @@ fun CreateCircle(
         elevation = CardDefaults.cardElevation(5.dp)
     ) {
         Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
-            Text(text = "Tap")
+            Text(text = stringResource(id = R.string.tap))
         }
     }
 }
